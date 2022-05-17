@@ -28,6 +28,7 @@ Player::~Player()
 
 void Player::Move()
 {
+	cout << "Player ÀÌµ¿" << endl;
 }
 
 void Player::Attack()

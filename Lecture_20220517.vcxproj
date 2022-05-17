@@ -141,19 +141,27 @@
   <ItemGroup>
     <ClCompile Include="Boar.cpp" />
     <ClCompile Include="BossGoblin.cpp" />
+    <ClCompile Include="Character.cpp" />
+    <ClCompile Include="CustomWorld.cpp" />
+    <ClCompile Include="Engine.cpp" />
     <ClCompile Include="Goblin.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Monster.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="Slime.cpp" />
+    <ClCompile Include="World.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Boar.h" />
     <ClInclude Include="BossGoblin.h" />
+    <ClInclude Include="Character.h" />
+    <ClInclude Include="CustomWorld.h" />
+    <ClInclude Include="Engine.h" />
     <ClInclude Include="Goblin.h" />
     <ClInclude Include="Monster.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="Slime.h" />
+    <ClInclude Include="World.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />

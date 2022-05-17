@@ -1,13 +1,16 @@
 #pragma once
-class Player
+#include "Character.h"
+
+class Player : public Character
 {
 public:
 	Player();
-	Player(int NewHP, int NewMP, int NewGold);
-	~Player();
+	virtual ~Player();
 
-	void Move();
-	void Attack();
+	Player(int NewHP, int NewMP, int NewGold);
+
+	virtual void Move() override;
+	virtual void Attack() override;
 	void Pickup();
 
 	int HP;
