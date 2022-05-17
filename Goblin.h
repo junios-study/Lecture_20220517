@@ -8,8 +8,8 @@ class Goblin : public Monster
 {
 public:
 	Goblin();
-	~Goblin();
+	virtual ~Goblin();
 
-	void Move();
+	virtual void Move() override;
 };
 

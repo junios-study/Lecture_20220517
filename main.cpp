@@ -3,6 +3,7 @@
 #include "Goblin.h"
 #include "Slime.h"
 #include "Boar.h"
+#include "BossGoblin.h"
 
 #include <string>
 #include <vector> //container STL , Standard Template Library
@@ -14,55 +15,37 @@ int main()
 	//1-3
 	srand(static_cast<unsigned int>(time(nullptr)));
 
+
 	//생성
-	int SpawnCount = rand() % 3 + 1;
-	vector<Goblin*> Golblins;
-	for (int i = 0; i < SpawnCount; ++i)
-	{
-		Golblins.push_back(new Goblin);
-	}
-	
-	SpawnCount = rand() % 3 + 1;
-	vector<Slime*> Slimes;
-	for (int i = 0; i < SpawnCount; ++i)
-	{
-		Slimes.push_back(new Slime);
-	}
 
-	SpawnCount = rand() % 3 + 1;
-	vector<Boar*> Boars;
-	for (int i = 0; i < SpawnCount; ++i)
-	{
-		Boars.push_back(new Boar);
-	}
+	//Monster* NewMonster = new Goblin;
+	//Monster* NewMonster = new Slime;
+	Monster* NewMonster = new Boar;
 
-	for (int i = 0; i < Golblins.size(); ++i)
+	NewMonster->Move();
+
+
+	vector<Monster*> Monsters;
+	Monsters.push_back(new BossGoblin);
+	//Monsters.push_back(new Goblin);
+	//Monsters.push_back(new Slime);
+	//Monsters.push_back(new Boar);
+	//Monsters.push_back(new Boar);
+
+
+	//Tick
+	for (int i = 0; i < Monsters.size(); ++i)
 	{
-		Golblins[i]->Move();
-	}
-	for (int i = 0; i < Slimes.size(); ++i)
-	{
-		Slimes[i]->Move();
-	}
-	for (int i = 0; i < Boars.size(); ++i)
-	{
-		Boars[i]->Move();
+		Monsters[i]->Move();
 	}
 
 
 	//삭제
-	for (int i = 0; i < Golblins.size(); ++i)
+	for (int i = 0; i < Monsters.size(); ++i)
 	{
-		delete Golblins[i];
+		delete Monsters[i];
 	}
-	for (int i = 0; i < Slimes.size(); ++i)
-	{
-		delete Slimes[i];
-	}
-	for (int i = 0; i < Boars.size(); ++i)
-	{
-		delete Boars[i];
-	}
+
 
 	return 0;
 }

@@ -5,7 +5,7 @@ class Boar : public Monster
 {
 public:
 	Boar();
-	~Boar();
+	virtual ~Boar();
 
 	void Move();
 };

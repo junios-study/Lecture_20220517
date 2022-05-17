@@ -6,13 +6,13 @@ class Monster
 {
 public:
 	Monster();
-	~Monster();
+	virtual ~Monster();
 
 	int HP;
 	int Gold;
 
-	void Drop();
-	void Move();
-	void Attack();
+	virtual void Drop();
+	virtual void Move();
+	virtual void Attack();
 };
 
