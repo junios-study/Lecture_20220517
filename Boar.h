@@ -6,5 +6,7 @@ class Boar : public Monster
 public:
 	Boar();
 	~Boar();
+
+	void Move();
 };
 
