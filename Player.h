@@ -3,14 +3,15 @@ class Player
 {
 public:
 	Player();
+	Player(int NewHP, int NewMP, int NewGold);
 	~Player();
-
-	int HP;
-	int MP;
-	int Gold;
 
 	void Move();
 	void Attack();
 	void Pickup();
+
+	int HP;
+	int MP;
+	int Gold;
 };
 
